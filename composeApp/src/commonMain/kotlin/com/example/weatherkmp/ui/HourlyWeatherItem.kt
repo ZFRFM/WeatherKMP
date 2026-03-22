@@ -69,7 +69,7 @@ fun HourlyWeatherItem(
         Spacer(modifier = Modifier.width(16.dp))
         Text(text = hourlyWeather.time)
         Spacer(modifier = Modifier.width(48.dp))
-        Text(text = hourlyWeather.temperature.toString())
+        Text(text = hourlyWeather.temperature)
     }
 }
 
@@ -81,7 +81,7 @@ private fun HourlyWeatherItemPreview() {
             hourlyWeather = HourlyWeatherUiData(
                 id = 0,
                 time = "15:00",
-                temperature = 12.0,
+                temperature = "12 °C",
             )
         )
     }

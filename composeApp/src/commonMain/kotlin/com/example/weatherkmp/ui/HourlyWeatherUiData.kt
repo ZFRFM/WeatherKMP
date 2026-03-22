@@ -5,11 +5,11 @@ import com.example.weatherkmp.domain.models.HourlyWeatherDomain
 data class HourlyWeatherUiData(
     val id: Int,
     val time: String,
-    val temperature: Double,
+    val temperature: String,
 )
 
-fun HourlyWeatherDomain.toDomain(id: Int) = HourlyWeatherUiData(
+fun HourlyWeatherDomain.toDomain(id: Int, time: String) = HourlyWeatherUiData(
     id = id,
     time = time,
-    temperature = temperature,
+    temperature = "$temperature °C",
 )

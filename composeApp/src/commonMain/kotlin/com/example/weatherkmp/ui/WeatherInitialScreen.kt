@@ -1,9 +1,11 @@
 package com.example.weatherkmp.ui
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -19,13 +21,15 @@ fun WeatherInitialScreen(
     callbacks: WeatherCallbacks,
 ) {
     Column(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
     ) {
         Spacer(Modifier.height(24.dp))
         // Не юзай хардкод! Мне можно)
         Text(
             text = "Тут ты можешь ввести название города и узнать погоду",
+            modifier = Modifier.padding(horizontal = 32.dp),
             textAlign = TextAlign.Center,
         )
 
